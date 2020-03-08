@@ -1,0 +1,15 @@
+{
+    "name": "stijn/dratejinn-telegrambot-boilerplate",
+    "description": "Boilerplate for Dratejinn's Telegram Bot",
+    "type": "project",
+    "require": {
+        "dratejinn/telegrambot": "^1.8",
+        "monolog/monolog": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Stijn Otten",
+            "email": "ottenstone@gmail.com"
+        }
+    ]
+}
