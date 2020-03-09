@@ -16,7 +16,7 @@ date_default_timezone_set('Europe/Amsterdam');
 
 echo "Daemon is starting" . PHP_EOL;
 
-$devBot = '';
+$myBot = '';
 
 $logger = new Logger('CBotLogger');
 $format = "%datetime% | %level_name% | %context.botname% | %message% %context% %extra%\n";
@@ -43,7 +43,7 @@ $apiLogger->pushHandler($apiStream);
 
 TelegramAPI::SetLogger($apiLogger);
 
-$bot = new Bot($devBot);
+$bot = new Bot($myBot);
 $bot->setLogger($logger);
 $bot->init();
 $bot->run(FALSE);

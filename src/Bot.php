@@ -14,6 +14,8 @@ class Bot extends TBot {
 
     protected $_messageSend = FALSE;
 
+    protected $myChatId = 1234567;
+
     protected $_handlers = [
         'message' => Handlers\MessageHandler::class,
         'callbackQuery' => Handlers\CallbackQueryHandler::class
@@ -35,14 +37,10 @@ class Bot extends TBot {
      */
     public function init() {
         parent::init();
-
         $myChat = new Chat;
-        $myChat->id = $this->myChat_id;
+        $myChat->id = $this->myChatId;
         $myChat->type = Chat::TYPE_PRIVATE;
-
-        $this->_chats = [
-            $myChat->id => 123456789,
-        ];
+        $this->_chats = [ $myChat->id => $this->myChatId ];
     }
 
     /**
@@ -53,7 +51,7 @@ class Bot extends TBot {
         if (!$this->_messageSend) {
             $sendMessage = new SendMessage;
             $sendMessage->text = 'Starting Bot';
-            $sendMessage->chatId = 123456789;
+            $sendMessage->chatId = $this->myChatId;
             $sendMessage->call($this->_bot);
             $this->_messageSend = true;
         }
