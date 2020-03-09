@@ -8,7 +8,7 @@ use Telegram\API\Type\{Chat, InlineKeyboardButton, InlineKeyboardMarkup};
 use Telegram\Bot\Handler\ACommandHandler;
 use Telegram\API\Method\SendMessage;
 
-class Mute extends ACommandHandler {
+class Keyboard extends ACommandHandler {
     /**
      * @inheritdoc
      */
@@ -37,6 +37,7 @@ class Mute extends ACommandHandler {
         $message = new SendMessage;
         $message->text = 'Yes or No ?';
         $message->chatId = $from_chat;
+        $message->replyMarkup = $keyboard;
         $this->sendMessage($message);
     }
 

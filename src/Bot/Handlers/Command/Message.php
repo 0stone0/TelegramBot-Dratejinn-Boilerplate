@@ -19,7 +19,7 @@ class Message extends ACommandHandler {
         $from_name = $this->_message->from->firstName;
 
         $message = new SendMessage;
-        $message->text = $msg;
+        $message->text = "Hi {$from_name}!";
         $message->chatId = $from_chat;
         $this->sendMessage($message);
     }

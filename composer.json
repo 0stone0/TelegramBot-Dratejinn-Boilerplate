@@ -11,5 +11,10 @@
             "name": "Stijn Otten",
             "email": "ottenstone@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "CBot\\":"src/"
+        }
+    }
 }
