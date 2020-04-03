@@ -20,7 +20,7 @@ $myBot = '';
 
 $logger = new Logger('CBotLogger');
 $format = "%datetime% | %level_name% | %context.botname% | %message% %context% %extra%\n";
-$formatter = new LineFormatter($format, NULL, FALSE, TRUE);
+$formatter = new LineFormatter($format, "H:i:s d-m-y ", FALSE, TRUE);
 $processor = new LengthProcessor([
     'level_name' => 8
 ], [
