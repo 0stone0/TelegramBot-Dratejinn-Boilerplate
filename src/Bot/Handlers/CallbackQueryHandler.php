@@ -33,7 +33,7 @@ class CallbackQueryHandler extends ACallbackQueryHandler {
         $message->chatId = $from_group;
         $this->sendMessage($message);
 
-        // Remove keybard
+        // Remove keyboard
         if ($shouldDisableKeyboard) {
             $this->_removeInlineKeyboard();
         }

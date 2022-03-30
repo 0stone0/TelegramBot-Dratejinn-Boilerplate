@@ -45,5 +45,4 @@ TelegramAPI::SetLogger($apiLogger);
 
 $bot = new Bot($myBot);
 $bot->setLogger($logger);
-$bot->init();
 $bot->run(FALSE);

@@ -33,7 +33,7 @@ class Bot extends TBot {
     }
 
     /**
-     * @inheritdocecho -e '\033]6;1;bg;red;brightness;255\a'e
+     * @inheritdoc
      */
     public function init() {
         parent::init();

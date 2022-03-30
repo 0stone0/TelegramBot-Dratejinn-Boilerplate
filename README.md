@@ -1,15 +1,14 @@
 # TelegramBot-Dratejinn-Boilerplate
-Telegram Bot Boilerplate based on Dratejinn's awesome Bot API!
+Telegram Bot Boilerplate based on [Dratejinn's awesome Bot API](https://github.com/Dratejinn/telegrambot/)!
 
 ## Getting started
 
-### Private token/ID
+### Private token
 Place your bot token in `Daemon.php`
 ```
-19      $myBot = '723458UYTHTAR....';
+19      $myBotToken = '723458UYTHTAR....';
 ```
-or
-In directly in the bot construct; `src/Bot/Bot.php`
+or, directly in the bot constructor; `src/Bot/Bot.php`
 ```
 28      public function __construct(string $token = NULL) {
 29          if ($token === NULL) {
@@ -18,21 +17,25 @@ In directly in the bot construct; `src/Bot/Bot.php`
 32          parent::__construct($token);
 33      }
 ```
-Set your private telgram ID in `src/Bot/Bot.php`
+
+### Private Chat ID
+Set your private telgram Chat ID in `src/Bot/Bot.php`
 ```
 17      protected $myChatId = 1234567;
-
 ```
+
 ### Start bot
+Direct:
 ```
 php Daemon.php
 ```
 
-Screen session;
+Screen session:
 ```
 screen -S myBot -d -m php ./Daemon.php
 ```
 
-Systemd;
+Systemd:
 ```
+// TODO
 ```
